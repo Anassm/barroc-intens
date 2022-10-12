@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class notes extends Model
 {
     use HasFactory;
+    public function user()
+    {
+        return $this->belongsTo(user::class);
+    }
+    public function companies()
+    {
+        return $this->belongsTo(companies::class);
+    }
 }
