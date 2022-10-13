@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreignId('product_id');
             $table->integer('amount');
             $table->decimal('price_per_product');
+            $table->timestamps();
         });
     }
 

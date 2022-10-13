@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('country_code');
             $table->dateTime('bkr_checked_at');
             $table->foreignId('contact_id');
+            $table->timestamps();
         });
     }
 

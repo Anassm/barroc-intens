@@ -17,7 +17,18 @@
                     </x-jet-nav-link>
                 </div>
             </div>
-
+            <x-jet-nav-link href="{{ route('inkoop.create.inkoop') }}"
+                        :active="request()->routeIs('inkoop.create.inkoop')">
+                        Categorie toevoegen
+                        </x-jet-nav-link>
+                        <x-jet-nav-link href="{{ route('inkoop.categorielist') }}"
+                        :active="request()->routeIs('inkoop.categorielist')">
+                        Categories tonen
+                        </x-jet-nav-link>
+                        <x-jet-nav-link href="{{ route('inkoop.productcreate.inkoop') }}"
+                        :active="request()->routeIs('inkoop.productcreate.inkoop')">
+                        Product toevoegen
+                        </x-jet-nav-link>
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <!-- Teams Dropdown -->
                 @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
@@ -68,7 +79,7 @@
                         </x-jet-dropdown>
                     </div>
                 @endif
-
+              
                 <!-- Settings Dropdown -->
                 <div class="ml-3 relative">
                     <x-jet-dropdown align="right" width="48">

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->tinyInteger('is_employee_only');
+            $table->timestamps();
         });
     }
 

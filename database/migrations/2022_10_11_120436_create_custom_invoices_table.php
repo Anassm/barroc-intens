@@ -18,6 +18,7 @@ return new class extends Migration
             $table->dateTime('date');
             $table->dateTime('paid_at');
             $table->foreignId('company_id');
+            $table->timestamps();
         });
     }
 
