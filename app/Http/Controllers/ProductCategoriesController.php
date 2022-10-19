@@ -35,4 +35,36 @@ class ProductCategoriesController extends Controller
                 'categories' => $categorie,
         ]);
     }
+    public function getEdit()
+    {
+        $categorie= product_categories::all();
+        return view('inkoop.categorieedit',[
+            'categories' => $categorie,
+    
+        ]);
+    }
+    public function putEdit(product_categories $categorie)
+    {
+
+        $data = request()->validate([
+            'name' => 'required | max:255 | min:3',
+            'is_employee_only' => 'required'
+
+        ]);
+
+        $categorie->update($data);
+        return redirect('/inkoop/categorielist'. $categorie->categorie_id)->with('succes', 'goed gewijzigd');
+    }
+    public function getDelete(product_categories $categories)
+    {
+        
+        return view('inkoop.categoriedelete', ['categories' => $categories]);
+    }
+
+    public function deleteDelete(product_categories $categories)
+    {
+        $categories->products()->delete();
+        $categories->delete();
+        return redirect()->route('inkoop.categorielist');
+    }
 }

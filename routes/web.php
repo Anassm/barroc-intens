@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductCategoriesController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\NotesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,6 +31,17 @@ Route::middleware([
 Route::get('/inkoop/create', [ProductCategoriesController::class, 'getcreate'])->name('inkoop.create');
 Route::post('/inkoop/create', [ProductCategoriesController::class, 'postcategorie'])->name('inkoop.create.inkoop');
 Route::get('/inkoop/categorielist', [ProductCategoriesController::class, 'getlist'])->name('inkoop.categorielist');
+Route::get('/inkoop/productlist/{Product_Categories}', [ProductsController::class, 'getlist'])->name('inkoop.productlist');
 
 Route::get('/inkoop/productcreate', [ProductsController::class, 'getcategories'])->name('inkoop.productcreate');
 Route::post('/inkoop/productcreate', [ProductsController::class, 'postproduct'])->name('inkoop.productcreate.inkoop');
+Route::get('/product/edit/{products}', [ProductsController::class, 'getEdit'])->name('inkoop.productedit');
+Route::put('/product/edit/{products}', [ProductsController::class, 'putEdit'])->name('inkoop.productedit.put');
+Route::get('/product/delete/{products}', [ProductsController::class, 'getDelete'])->name('inkoop.productdelete.delete');
+Route::delete('/product/delete/{products}', [ProductsController::class, 'deleteDelete'])->name('inkoop.productdelete');
+Route::get('/categorie/edit/{categorie}', [ProductCategoriesController::class, 'getEdit'])->name('inkoop.categorie');
+Route::put('/categorie/edit/{categorie}', [ProductCategoriesController::class, 'putEdit'])->name('inkoop.categorie.put');
+Route::get('/categorie/delete/{categories}', [ProductCategoriesController::class, 'getDelete'])->name('inkoop.categoriedelete.delete');
+Route::delete('/categorie/delete/{categories}', [ProductCategoriesController::class, 'deleteDelete'])->name('inkoop.categoriedelete');
+Route::get('/sales/notes', [NotesController::class, 'getcreate'])->name('sales.notes');
+Route::post('/sales/notes', [NotesController::class, 'postnotes'])->name('sales.notes.sales');
