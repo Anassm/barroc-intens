@@ -35,15 +35,15 @@ class ProductCategoriesController extends Controller
                 'categories' => $categorie,
         ]);
     }
-    public function getEdit()
+    public function getEdit(product_categories $product_categories)
     {
-        $categorie= product_categories::all();
+      
         return view('inkoop.categorieedit',[
-            'categories' => $categorie,
+            'categorie' => $product_categories,
     
         ]);
     }
-    public function putEdit(product_categories $categorie)
+    public function putEdit(product_categories $product_categories)
     {
 
         $data = request()->validate([
@@ -52,8 +52,8 @@ class ProductCategoriesController extends Controller
 
         ]);
 
-        $categorie->update($data);
-        return redirect('/inkoop/categorielist'. $categorie->categorie_id)->with('succes', 'goed gewijzigd');
+        $product_categories->update($data);
+        return redirect('/inkoop/categorielist'. $product_categories->categorie_id)->with('succes', 'goed gewijzigd');
     }
     public function getDelete(product_categories $categories)
     {

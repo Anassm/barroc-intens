@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductCategoriesController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\NotesController;
+use App\Http\Controllers\teamscontroller;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,9 +41,11 @@ Route::get('/product/edit/{products}', [ProductsController::class, 'getEdit'])->
 Route::put('/product/edit/{products}', [ProductsController::class, 'putEdit'])->name('inkoop.productedit.put');
 Route::get('/product/delete/{products}', [ProductsController::class, 'getDelete'])->name('inkoop.productdelete.delete');
 Route::delete('/product/delete/{products}', [ProductsController::class, 'deleteDelete'])->name('inkoop.productdelete');
-Route::get('/categorie/edit/{categorie}', [ProductCategoriesController::class, 'getEdit'])->name('inkoop.categorie');
-Route::put('/categorie/edit/{categorie}', [ProductCategoriesController::class, 'putEdit'])->name('inkoop.categorie.put');
-Route::get('/categorie/delete/{categories}', [ProductCategoriesController::class, 'getDelete'])->name('inkoop.categoriedelete.delete');
-Route::delete('/categorie/delete/{categories}', [ProductCategoriesController::class, 'deleteDelete'])->name('inkoop.categoriedelete');
+Route::get('/categorie/edit/{product_categories}', [ProductCategoriesController::class, 'getEdit'])->name('inkoop.categorie');
+Route::put('/categorie/edit/{product_categories}', [ProductCategoriesController::class, 'putEdit'])->name('inkoop.categorie.put');
+Route::get('/categorie/delete/{product_categories}', [ProductCategoriesController::class, 'getDelete'])->name('inkoop.categoriedelete.delete');
+Route::delete('/categorie/delete/{product_categories}', [ProductCategoriesController::class, 'deleteDelete'])->name('inkoop.categoriedelete');
 Route::get('/sales/notes', [NotesController::class, 'getcreate'])->name('sales.notes');
 Route::post('/sales/notes', [NotesController::class, 'postnotes'])->name('sales.notes.sales');
+
+Route::get('/dashboard/{teams}', [teamscontroller::class, 'team']);

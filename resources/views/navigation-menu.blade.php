@@ -9,23 +9,24 @@
                         <x-jet-application-mark class="block h-9 w-auto" />
                     </a>
                 </div>
-
+                
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex text-amber-300">
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link class=" text-amber-300 hover:text-amber-200  hover:border-amber-300" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
                 </div>
             </div>
-            <x-jet-nav-link href="{{ route('inkoop.create.inkoop') }}"
+
+            <x-jet-nav-link class="text-amber-300  hover:text-amber-200  hover:border-amber-300" href="{{ route('inkoop.create.inkoop') }}"
                         :active="request()->routeIs('inkoop.create.inkoop')">
                         Categorie toevoegen
                         </x-jet-nav-link>
-                        <x-jet-nav-link href="{{ route('inkoop.categorielist') }}"
+                        <x-jet-nav-link class="text-amber-300  hover:text-amber-200  hover:border-amber-300" href="{{ route('inkoop.categorielist') }}"
                         :active="request()->routeIs('inkoop.categorielist')">
                         Categories tonen
                         </x-jet-nav-link>
-                        <x-jet-nav-link href="{{ route('inkoop.productcreate.inkoop') }}"
+                        <x-jet-nav-link class="text-amber-300  hover:text-amber-200  hover:border-amber-300" href="{{ route('inkoop.productcreate.inkoop') }}"
                         :active="request()->routeIs('inkoop.productcreate.inkoop')">
                         Product toevoegen
                         </x-jet-nav-link>
