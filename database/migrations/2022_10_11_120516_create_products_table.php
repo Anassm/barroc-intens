@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('image_path');
             $table->decimal('price');
             $table->foreignId('product_category_id');
+            $table->timestamps();
         });
     }
 

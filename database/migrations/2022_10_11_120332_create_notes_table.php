@@ -19,6 +19,7 @@ return new class extends Migration
             $table->dateTime('date');
             $table->foreignId('company_id');
             $table->foreignId('author_id');
+            $table->timestamps();
         });
     }
 
