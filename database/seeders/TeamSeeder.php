@@ -17,32 +17,41 @@ class TeamSeeder extends Seeder
     {
         # --Placeholder--
         DB::table('teams')->insert([
-            'name' => ".",
-            'personal_team' => "1",
-        ]);
-        DB::table('teams')->insert([
-            'name' => "Finance",
-            'personal_team' => "0",
-        ]);
-        DB::table('teams')->insert([
-            'name' => "Sales",
-            'personal_team' => "0",
-        ]);
-        DB::table('teams')->insert([
-            'name' => "Inkoop",
-            'personal_team' => "0",
-        ]);
-        DB::table('teams')->insert([
-            'name' => "Maintenance",
-            'personal_team' => "0",
-        ]);
-        DB::table('teams')->insert([
-            'name' => ".",
-            'personal_team' => "1",
-        ]);
-        DB::table('teams')->insert([
-            'name' => ".",
-            'personal_team' => "1",
+            [
+                // 'id' => 0,
+                'name' => ".",
+                'personal_team' => "1"
+            ],
+            [
+                // 'id' => 1,
+                'name' => "Finance",
+                'personal_team' => "0"
+            ],
+            [
+                // 'id' => 2,
+                'name' => "Sales",
+                'personal_team' => "0"
+            ],
+            [
+                // 'id' => 3,
+                'name' => "Inkoop",
+                'personal_team' => "0"
+            ],
+            [
+                // 'id' => 4,
+                'name' => "Maintenance",
+                'personal_team' => "0"
+            ],
+            [
+                // 'id' => 5,
+                'name' => ".",
+                'personal_team' => "1"
+            ],
+            [
+                // 'id' => 6,
+                'name' => ".",
+                'personal_team' => "1"
+            ],
         ]);
     }
 }

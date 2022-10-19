@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('team_user', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('team_id');
-            $table->foreignId('user_id');
+            $table->integer('team_id');
+            $table->integer('user_id');
             $table->string('role')->nullable();
             $table->timestamps();
 
