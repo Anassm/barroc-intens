@@ -67,4 +67,12 @@ class ProductCategoriesController extends Controller
         $categories->delete();
         return redirect()->route('inkoop.categorielist');
     }
+    public function getcategorie()
+    {
+        $product_categories = product_categories::all();
+        return view('welcome',
+    [
+        'categories'=> $product_categories,
+    ]);
+    }
 }

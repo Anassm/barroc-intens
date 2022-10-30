@@ -21,16 +21,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware([
+// Route::middleware([
+//     'auth:sanctum',
+//     config('jetstream.auth_session'),
+//     'verified'
+// ])->group(function () {
+//     Route::get('/dashboard', function () {
+//         return view('dashboard');
+//     })->name('dashboard');
+// });
+Route::get('/inkoop/create', [ProductCategoriesController::class, 'getcreate'])->name('inkoop.create')->middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
-Route::get('/inkoop/create', [ProductCategoriesController::class, 'getcreate'])->name('inkoop.create');
+]);
 Route::post('/inkoop/create', [ProductCategoriesController::class, 'postcategorie'])->name('inkoop.create.inkoop');
 Route::get('/inkoop/categorielist', [ProductCategoriesController::class, 'getlist'])->name('inkoop.categorielist');
 Route::get('/inkoop/productlist/{Product_Categories}', [ProductsController::class, 'getlist'])->name('inkoop.productlist');
@@ -47,5 +51,6 @@ Route::get('/categorie/delete/{product_categories}', [ProductCategoriesControlle
 Route::delete('/categorie/delete/{product_categories}', [ProductCategoriesController::class, 'deleteDelete'])->name('inkoop.categoriedelete');
 Route::get('/sales/notes', [NotesController::class, 'getcreate'])->name('sales.notes');
 Route::post('/sales/notes', [NotesController::class, 'postnotes'])->name('sales.notes.sales');
+Route::get('/productpagina/{product_categories}', [ProductsController::class, 'productpagina'])->name('productpagina');
 
-Route::get('/dashboard/{teams}', [teamscontroller::class, 'team']);
+Route::get('/dashboard', [teamscontroller::class, 'team'])->name('dashboard');

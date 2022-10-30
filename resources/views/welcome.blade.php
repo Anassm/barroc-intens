@@ -7,6 +7,7 @@
         <title>Barroc Intens</title>
 
         <!-- Fonts -->
+        <script src="https://cdn.tailwindcss.com"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
@@ -24,6 +25,7 @@
         </style>
     </head>
     <body class="antialiased">
+       
         <div class="welcome-page">
         <div>
             @if (Route::has('login'))
@@ -40,7 +42,6 @@
                 </div>
             @endif
         </div>
-
         <!--<div class="welcome-first-block">
             <h2 class="welcome-first-title">Titel</h2>
             <p class="welcome-first-txt">

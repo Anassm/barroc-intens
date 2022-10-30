@@ -86,6 +86,17 @@ class ProductsController extends Controller
         $products->delete();
         return redirect()->route('inkoop.categorielist');
     }
+
+    public function productpagina(product_categories $product_categories)
+    {
+        $product = products::all();
+
+        return view('productpagina',[
+        'categories'=> $product_categories,
+        'products' => $product,
+        ]);
+    }
+    
     
     
 }
