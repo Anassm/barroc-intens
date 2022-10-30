@@ -1,6 +1,6 @@
 <footer class=" max-h-full p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-amber-300">
     <div class="sm:flex sm:items-center sm:justify-between">
-        <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0">
+        <a href="/" class="flex items-center mb-4 sm:mb-0">
             <img src="/images/Barroc-intens.png" class="mr-3 h-8" alt="Flowbite Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-gray-800">Barroc-intens</span>
         </a>

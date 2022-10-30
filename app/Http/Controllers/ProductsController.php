@@ -104,7 +104,7 @@ class ProductsController extends Controller
         $product_categories = product_categories::all();
 
         return view('welcome',[
-        'categories'=> $product_categories,
+        'categoriese'=> $product_categories,
         'products' => $product,
         ]);
     }
