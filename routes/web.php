@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BkrController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductCategoriesController;
 use App\Http\Controllers\ProductsController;
@@ -51,6 +52,11 @@ Route::get('/categorie/delete/{product_categories}', [ProductCategoriesControlle
 Route::delete('/categorie/delete/{product_categories}', [ProductCategoriesController::class, 'deleteDelete'])->name('inkoop.categoriedelete');
 Route::get('/sales/notes', [NotesController::class, 'getcreate'])->name('sales.notes');
 Route::post('/sales/notes', [NotesController::class, 'postnotes'])->name('sales.notes.sales');
+<<<<<<< HEAD
 Route::get('/productpagina/{product_categories}', [ProductsController::class, 'productpagina'])->name('productpagina');
+=======
+Route::get('/finance/bkr-check', [BkrController::class, 'bkrPageView']);
+Route::get('/finance/bkr-check-load/{companies}', [BkrController::class, 'bkrPageLoad']);
+>>>>>>> 4d42dd6bfe20742aef5ccf310a9c6b95fa3d9b14
 
 Route::get('/dashboard', [teamscontroller::class, 'team'])->name('dashboard');
