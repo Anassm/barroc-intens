@@ -49,7 +49,7 @@
             </p>
         </div>
         -->
-
+        @include('homepagina.navbar')
         <div class="grid-2-colums-1-row grid grid-cols-2">
             <div class="welcome-first-block">
                 <h2 class="welcome-first-title">Titel</h2>

@@ -7,17 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <div class=" justify-center my-3.5  shadow-gray-800">
-        <div class="justify-center">
+    <div class="my-5 border-solid rounded">
+    <div class="grid justify-items-start">
         @foreach($categories->products as $product)
             {{$product->name}}
             {{$product->description}}
             <img src="{{ asset('images/' . $product->image_path) }}" alt="" style="height: 200px">
             {{$product->price}}
-        </div>
-        </a>
         @endforeach
     </div>
-
+</div>
 </body>
 </html>

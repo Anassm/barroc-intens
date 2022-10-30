@@ -9,11 +9,11 @@
 </head>
 <body>
     
-    @include('productpagina.navbar')
+    @include('homepagina.navbar')
 <main>
-    @include('productpagina.producten')
+    @include('producten.producten')
 </main>
-    @include('productpagina.footer')
+    @include('homepagina.footer')
 
 </body>
 </html>

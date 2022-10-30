@@ -90,8 +90,20 @@ class ProductsController extends Controller
     public function productpagina(product_categories $product_categories)
     {
         $product = products::all();
+        $categorie = product_categories::all();
 
         return view('productpagina',[
+        'categories'=> $product_categories,
+        'categoriese'=> $categorie,
+        'products' => $product,
+        ]);
+    }
+    public function getproduct()
+    {
+        $product = products::all();
+        $product_categories = product_categories::all();
+
+        return view('welcome',[
         'categories'=> $product_categories,
         'products' => $product,
         ]);
