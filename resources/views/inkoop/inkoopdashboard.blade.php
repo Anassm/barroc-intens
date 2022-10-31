@@ -7,8 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <x-app-layout teamid = '{{$teamid}}' >
+    <x-app-layout teamid = '{{$teamid}}' />
         hallo
-    </x-app-layout>
 </body>
 </html>
