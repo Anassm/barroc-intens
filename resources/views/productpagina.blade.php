@@ -14,6 +14,5 @@
     @include('producten.producten')
 </main>
     @include('homepagina.footer')
-
 </body>
 </html>

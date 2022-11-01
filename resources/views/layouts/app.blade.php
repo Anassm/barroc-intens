@@ -1,5 +1,8 @@
 
-@props(['teamid'])
+@props(['teamid' => 0])
+
+
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -21,7 +24,7 @@
     <body class="font-sans antialiased">
         <x-jet-banner />
 
-        <div class="min-h-screen bg-gray-100">
+        <div class="min-h-screen bg-gray-600">
             @livewire('navigation-menu')
 
             <!-- Page Heading -->

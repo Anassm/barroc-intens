@@ -11,19 +11,20 @@ class teamscontroller extends Controller
     public function team()
     {
 
-        // $teamid = Auth::user()->current_team_id;
-        $teamid = 4;
+        $teamid = Auth::user()->current_team_id;
+        
        if($teamid == 4){
         return view('inkoop.inkoopdashboard', [
             'teamid' => $teamid
         ]);
+    
        }
        if($teamid == 5){
         return view('finance.financedashboard',[
             'teamid' => $teamid
         ]);
        }
-       if($teamid == 4){
+       if($teamid == 2){
         return view('maintenance.maintenancedashboard',[
             'teamid' => $teamid
         ]);

@@ -8,6 +8,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    
+ <x-app-layout>
+
+
+
 <div class="px-6 w-80">
     <form action="{{ route('sales.notes.sales') }}" method="post">
         {{ csrf_field() }}
@@ -24,5 +29,7 @@
         <button type="submit" class="w-full text-white bg-amber-300 hover:bg-amber-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-amber-300 dark:hover:bg-amber-200 dark:focus:ring-blue-800">Sla afspraak op</button>
         </form>
     </div>
+    
+</x-app-layout>
 </body>
 </html>

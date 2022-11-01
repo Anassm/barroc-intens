@@ -90,18 +90,15 @@ class ProductsController extends Controller
     public function productpagina(product_categories $product_categories)
     {
         $product = products::all();
-        $categorie = product_categories::all();
 
         return view('productpagina',[
         'categories'=> $product_categories,
-        'categoriese'=> $categorie,
         'products' => $product,
         ]);
     }
-    public function getproduct()
+    public function getproduct(product_categories $product_categories )
     {
-        $product = products::all();
-        $product_categories = product_categories::all();
+        $product = products::inRandomOrder()->limit(3)->get();
 
         return view('welcome',[
         'categoriese'=> $product_categories,

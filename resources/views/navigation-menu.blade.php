@@ -1,3 +1,5 @@
+
+
 <nav x-data="{ open: false }" class="bg-gray-800 border-b border-gray-800">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
@@ -17,6 +19,12 @@
                     </x-jet-nav-link>
                 </div>
             </div>
+
+            @php
+               $teamid = Auth::user()->current_team_id  
+            @endphp
+
+           
 
                 @if($teamid == 4)
                 
@@ -40,7 +48,7 @@
                         <x-jet-dropdown align="right" width="60">
                             <x-slot name="trigger">
                                 <span class="inline-flex rounded-md">
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-amber-300 bg-gray-800 hover:bg-gray-800 hover:text-gray-700 focus:outline-none focus:bg-gray-800 active:bg-gray-800 transition">
+                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-amber-300 bg-gray-800 hover:bg-gray-800 hover:text-amber-200 focus:outline-none focus:bg-gray-800 active:bg-gray-800 transition">
                                         {{ Auth::user()->currentTeam->name }}
 
                                         <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -94,7 +102,7 @@
                                 </button>
                             @else
                                 <span class="inline-flex rounded-md">
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-amber-300 bg-gray-800 hover:text-gray-800 focus:outline-none transition">
+                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-amber-300 bg-gray-800 hover:text-amber-200 focus:outline-none transition">
                                         {{ Auth::user()->name }}
 
                                         <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
