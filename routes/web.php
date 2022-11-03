@@ -61,3 +61,8 @@ Route::get('/finance/bkr-check-load/{companies}', [BkrController::class, 'bkrPag
 Route::get('/', [ProductsController::class, 'getproduct'])->name('getproduct'); 
 
 Route::get('/dashboard', [teamscontroller::class, 'team'])->name('dashboard');
+
+
+Route::get('/contact', function () {
+    return view('contact');
+});

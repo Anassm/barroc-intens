@@ -24,9 +24,8 @@
         </style>
     </head>
     <body class="antialiased bg-gray-600">
-        @include('homepagina.navbar')
-      
-        <div class="welcome-page">
+         @include('homepagina.navbar')
+        {{-- <div class="welcome-page"> --}}
         {{-- <div>
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -48,8 +47,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem adipisci recusandae commodi! Laboriosam commodi veritatis optio adipisci ipsam corporis voluptas tenetur! Nisi et itaque sapiente molestias officiis quisquam sit tenetur.
             </p>
         </div>
-        -->
-        @include('homepagina.slider')
+    -->
         {{-- <div class="grid-2-colums-1-row grid grid-cols-2">
             <div class="welcome-first-block">
                 <h2 class="welcome-first-title">Titel</h2>

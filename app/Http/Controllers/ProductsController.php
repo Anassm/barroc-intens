@@ -96,9 +96,10 @@ class ProductsController extends Controller
         'products' => $product,
         ]);
     }
-    public function getproduct(product_categories $product_categories )
+    public function getproduct()
     {
         $product = products::inRandomOrder()->limit(3)->get();
+        $product_categories = product_categories::All();
 
         return view('welcome',[
         'categoriese'=> $product_categories,

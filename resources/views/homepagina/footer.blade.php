@@ -1,13 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <footer class=" mt-6 max-h-full p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-800">
+<style>
+.footer{
+    background-color: #212121;
+    margin-top: 25px;
+    width: 100%;
+        height: auto;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        bototom:0;
+}
+    </style>
+    <footer class="footer" class=" mt-6 p-4 bg-white rounded-lg shadow md:px-6 md:py-8 ">
         <div class="sm:flex sm:items-center sm:justify-between">
             <a href="/" class="flex items-center mb-4 sm:mb-0">
                 <img src="/images/Barroc-intens.png" class="mr-3 h-8" alt="Flowbite Logo" />
@@ -18,7 +22,7 @@
                     <a href="/" class="mr-4 hover:underline md:mr-6 ">Home</a>
                 </li>
                 <li>
-                    <a href="#" class="hover:underline">Contact</a>
+                    <a href="/contact" class="hover:underline">Contact</a>
                 </li>
             </ul>
         </div>
@@ -26,5 +30,3 @@
         <span class="block text-sm text-amber-300 sm:text-center dark:text-amber-300">© 2022 <a href="/" class="hover:underline">Barroc-intens™</a>.Bonen en koffiezetapparaten.
         </span>
     </footer>
-</body>
-</html>

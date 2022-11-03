@@ -19,15 +19,14 @@
         <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
             <form action="{{ route('inkoop.create.inkoop') }}" method="post">
                 {{ csrf_field() }}
-                <div class="bg-amber-300 w-96 px-2.5">
                 <div class="mb-6">
-                    <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-800">Naam:</label>
+                    <label for="text" class="block mb-2 text-sm font-medium  text-amber-300 dark:text-amber-300">Naam:</label>
                     <input type="name" id="name" name="name" class=" w-96 bg-amber-300 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-800 dark:border-gray-800 dark:placeholder-amber-300 dark:text-amber-300 dark:focus:ring-blue-500 dark:focus:border-blue-500  text-amber-300 "  placeholder="" required>
                     </div>
                     @error('name')
                     {{$message}}
                     @enderror
-                    <div class="mb-6 text-gray-800">
+                    <div class="mb-6  text-amber-300 dark:text-amber-300">
                         <input type="checkbox" id="employee" name="is_employee_only" value="1">
                         <label for="employee">employee only</label><br>
                         <input type="checkbox" id="employee" name="is_employee_only" value="0">
