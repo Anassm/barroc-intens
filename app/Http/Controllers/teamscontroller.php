@@ -21,6 +21,7 @@ class teamscontroller extends Controller
        }
 
        if($teamid == 2){
+       
 
        if($teamid == 6){
 
