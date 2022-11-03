@@ -19,7 +19,7 @@ class teamscontroller extends Controller
         ]);
     
        }
-       if($teamid == 5){
+       if($teamid == 6){
         return view('finance.financedashboard',[
             'teamid' => $teamid
         ]);
