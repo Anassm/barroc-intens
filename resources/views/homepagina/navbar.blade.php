@@ -124,7 +124,6 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="#">Categorieën</a>
                         <ul class="submenu">
-                        
                             @foreach($categoriese as $categorie)
                                 <li><a href="/productpagina/{{$categorie->id}}">{{$categorie->name}}</a>
                                 </li>

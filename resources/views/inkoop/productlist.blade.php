@@ -13,6 +13,7 @@
                Product overzicht
             </h2>
         </x-slot><br/>
+        
         <div class=" flex justify-center">
             <div class="overflow-x-auto relative shadow-md sm:rounded-lg lg:w-3/4">
                 <table class="w-full text-sm text-left text-amber-300 dark:text-amber-4300 ">

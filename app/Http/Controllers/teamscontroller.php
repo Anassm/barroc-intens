@@ -22,10 +22,10 @@ class teamscontroller extends Controller
 
 
        if($teamid == 2){
-       
+       }
 
        if($teamid == 6){
-
+       }
 
        if($teamid == 5){
         return view('finance.financedashboard',[
