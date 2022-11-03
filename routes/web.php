@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductCategoriesController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\NotesController;
 use App\Http\Controllers\teamscontroller;
+use App\Http\Controllers\storingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,8 +57,10 @@ Route::post('/sales/notes', [NotesController::class, 'postnotes'])->name('sales.
 Route::get('/productpagina/{product_categories}', [ProductsController::class, 'productpagina'])->name('productpagina');
 
 Route::get('/finance/bkr-check', [BkrController::class, 'bkrPageView']);
-Route::get('/finance/bkr-check-load/{companies}', [BkrController::class, 'bkrPageLoad']);
+Route::get('/finance/bkr-check-load/{companies}', [BkrController::class, 'bkrPageLoad'])->name('finance.bkr');
 
 Route::get('/', [ProductsController::class, 'getproduct'])->name('getproduct'); 
 
 Route::get('/dashboard', [teamscontroller::class, 'team'])->name('dashboard');
+
+Route::get('/maintenance/storing', [storingController::class, 'storingPageView'])->name('maintenance.storing');
