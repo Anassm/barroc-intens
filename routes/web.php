@@ -49,8 +49,8 @@ Route::get('/product/delete/{products}', [ProductsController::class, 'getDelete'
 Route::delete('/product/delete/{products}', [ProductsController::class, 'deleteDelete'])->name('inkoop.productdelete');
 Route::get('/categorie/edit/{product_categories}', [ProductCategoriesController::class, 'getEdit'])->name('inkoop.categorie');
 Route::put('/categorie/edit/{product_categories}', [ProductCategoriesController::class, 'putEdit'])->name('inkoop.categorie.put');
-Route::get('/categorie/delete/{product_categories}', [ProductCategoriesController::class, 'getDelete'])->name('inkoop.categoriedelete.delete');
-Route::delete('/categorie/delete/{product_categories}', [ProductCategoriesController::class, 'deleteDelete'])->name('inkoop.categoriedelete');
+Route::get('/categorie/delete/{categories}', [ProductCategoriesController::class, 'getDelete'])->name('inkoop.categoriedelete.delete');
+Route::delete('/categorie/delete/{categories}', [ProductCategoriesController::class, 'deleteDelete'])->name('inkoop.categoriedelete');
 Route::get('/sales/notes', [NotesController::class, 'getcreate'])->name('sales.notes');
 Route::post('/sales/notes', [NotesController::class, 'postnotes'])->name('sales.notes.sales');
 
@@ -63,8 +63,11 @@ Route::get('/', [ProductsController::class, 'getproduct'])->name('getproduct');
 
 Route::get('/dashboard', [teamscontroller::class, 'team'])->name('dashboard');
 
-Route::get('/contact', function () {
-    return view('contact');
-});
 
 Route::get('/maintenance/storing', [storingController::class, 'storingPageView'])->name('maintenance.storing');
+
+
+Route::get('/enkelpagina/{products}', [ProductsController::class, 'enkelproduct'])->name('enkelproduct');
+
+Route::get('/contact', [ProductsController::class, 'contact'])->name('contact');
+

@@ -1,32 +1,103 @@
-<style>
-.footer{
-    background-color: #212121;
-    margin-top: 25px;
-    width: 100%;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .grid-3-columns-1-row{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-auto-rows: auto;
+        gap: 1rem;
+        height: 100%;
+    }
+    .footer{
+        background-color: #fff;
+        width: 100%;
         height: auto;
         padding-left: 2.5%;
         padding-right: 2.5%;
         padding-top: 3%;
         padding-bottom: 3%;
-        bototom:0;
-}
-    </style>
-    <footer class="footer" class=" mt-6 p-4 bg-white rounded-lg shadow md:px-6 md:py-8 ">
-        <div class="sm:flex sm:items-center sm:justify-between">
-            <a href="/" class="flex items-center mb-4 sm:mb-0">
-                <img src="/images/Barroc-intens.png" class="mr-3 h-8" alt="Flowbite Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-amber-300">Barroc-intens</span>
-            </a>
-            <ul class="flex flex-wrap items-center mb-6 text-sm text-amber-300 sm:mb-0 dark:text-amber-300">
-                <li>
-                    <a href="/" class="mr-4 hover:underline md:mr-6 ">Home</a>
-                </li>
-                <li>
-                    <a href="/contact" class="hover:underline">Contact</a>
-                </li>
-            </ul>
+    }    
+    .logo{
+        font-size: 1.4rem;
+        font-weight: bold;
+        padding-bottom: .5%;
+        color: black;
+    }
+    .info{
+        color: black;
+    }
+    .card1{
+        background-color: #fff;
+        padding-top: 1%;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-bottom: 1%;
+        border-radius: 20px;
+        box-shadow: rgba(3, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    }
+    .bold{
+        font-weight: bold;
+    }
+    .Logo-Photo{
+        margin-left: 20%;
+        width: 50%;
+        height: auto;
+    }
+</style>
+</head>
+<body>
+
+<style>
+        .url{
+            height:200px;
+            margin:auto;
+        }
+        .footer{
+            background-color: #212121;
+            margin-top: 25px;
+            color: #ffd700;
+        }
+</style>
+    <footer>
+        <div class="footer">
+            <div class="grid-3-columns-1-row"> 
+                <div class="grid-box-1">
+                    <img class="Logo-Photo" src="/images/Barroc-intens.png" alt="">
+                </div>
+                <div class="grid-box-2">
+                    <div class="bold">
+                        Email: 
+                    </div>
+                    <div class="text">
+                        Barroc-intens@gmail.com
+                    </div>
+                    <br/>
+                    <div class="bold">
+                        Phonenumber:
+                    </div>
+                    <div class="text">
+                        06 123456789
+                    </div>
+                </div>
+                <div class="grid-box-3">
+                    <div class="bold">
+                        Adress: 
+                    </div>
+                    <div class="text">
+                        Bakkerstraat 21
+                    </div>
+                </div>
+                <div class="grid-box-4">
+                    <div class="text">
+                </div>
+            </div>
         </div>
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-amber-300 lg:my-8" />
-        <span class="block text-sm text-amber-300 sm:text-center dark:text-amber-300">© 2022 <a href="/" class="hover:underline">Barroc-intens™</a>.Bonen en koffiezetapparaten.
-        </span>
     </footer>
+</body>
+</html>

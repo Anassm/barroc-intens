@@ -98,16 +98,48 @@ class ProductsController extends Controller
         'products' => $product,
         ]);
     }
-    public function getproduct()
+    public function getproduct(product_categories $categorie)
     {
         $product = products::inRandomOrder()->limit(3)->get();
         $product_categories = product_categories::All();
+        $producten = products::inRandomOrder()->limit(2)->get();
+        $productsen = products::inRandomOrder()->limit(1)->get();        
 
         return view('welcome',[
         'categoriese'=> $product_categories,
         'products' => $product,
+        'productsen' => $productsen,
+        'categories' => $categorie,
+        'producten' => $producten
         ]);
     }
+
+
+    public function enkelproduct(product_categories $product_categories, products $product)
+    {
+        $categorie = product_categories::All();
+
+        return view('enkelpagina',[
+        'products'=> $product,
+        'categoriese' => $categorie,
+        'categories'=> $product_categories,
+
+        ]);
+    }
+
+
+    public function contact(product_categories $product_categories, products $product)
+    {
+        $categorie = product_categories::All();
+
+        return view('contact',[
+        'products'=> $product,
+        'categoriese' => $categorie,
+        'categories'=> $product_categories,
+
+        ]);
+    }
+    
     
     
     
