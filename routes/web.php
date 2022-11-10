@@ -7,6 +7,7 @@ use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\NotesController;
 use App\Http\Controllers\teamscontroller;
 use App\Http\Controllers\storingController;
+use App\Http\Controllers\FactuurController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,3 +72,4 @@ Route::get('/enkelpagina/{products}', [ProductsController::class, 'enkelproduct'
 
 Route::get('/contact', [ProductsController::class, 'contact'])->name('contact');
 
+Route::get('/finance', [FactuurController::class, 'factuurPageView'])->name('factuurPageView');
