@@ -7,20 +7,20 @@
         <title>Laravel</title>
         <style>
         body{
-        background-color: #d5d5d5;
-        font-family: Arial, sans-serif;
+        background-color: #212121;
+        font-family: "Roboto";
         }
 
         .cards{
         margin-left: 2.5%;
-        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        box-shadow: #212121 0px 19px 38px, #212121 0px 15px 12px;
         border-radius: 20px;
         max-width: 95%;
         padding-top: 40px;
         padding-bottom: 40px;
         margin-bottom: -290px;
-        background-color: #fff;
         position: relative;
+        background-color:#fff;
         }
         .cards2{
         margin-left: 2.5%;

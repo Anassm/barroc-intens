@@ -7,11 +7,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
+<style>
+.whitespace1{
+        height: 50px;
+        }
+
+</style>
 <body class="bg-gray-600">
     @include('homepagina.navbar')
 
+<div class="whitespace1"></div>
     @include('contact.formulier')
-
+</div>
+<footer>
     @include('homepagina.footer')
+</footer>
 </body>
 </html>

@@ -25,6 +25,7 @@ class ProductsController extends Controller
             'description' => 'required | max:255 | min:3',
             'image_path' => 'required|mimes:jpg,png,jpeg|max:5048',
             'price' => 'required | max:255 | min:3',
+            'amount' => 'required | max:255 | min:3',
         ]);
 
         
@@ -37,6 +38,7 @@ class ProductsController extends Controller
             'name' => $request->input('name'),
             'price' => $request->input('price'),
             'description' => $request->input('description'),
+            'amount' => $request->input('amount'),
             'product_category_id' => $request->input('product_category_id'),
             'image_path' => $newImageName,]);
             return "GELUKT!";
@@ -67,6 +69,7 @@ class ProductsController extends Controller
             'name' => 'required | max:255 | min:3',
             'description' => 'required | max:255 | min:3',
             'price' => 'required | max:255 | min:3',
+            'amount' => 'required | max:255 | min:3',
 
         ]);
 
@@ -115,12 +118,12 @@ class ProductsController extends Controller
     }
 
 
-    public function enkelproduct(product_categories $product_categories, products $product)
+    public function enkelproduct( products $products)
     {
         $categorie = product_categories::All();
-
+        $product_categories = product_categories::all();
         return view('enkelpagina',[
-        'products'=> $product,
+        'products'=> $products,
         'categoriese' => $categorie,
         'categories'=> $product_categories,
 

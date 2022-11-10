@@ -14,7 +14,7 @@
             body{
                 font-size: 1rem;
                 line-height: 1.6;
-                background-color: #ecf0f1;
+                background-color: #212121;
                 color: #666;
             }
 

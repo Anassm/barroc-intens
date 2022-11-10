@@ -24,7 +24,8 @@
             height:600px;
             /* margin-bottom:20px; */
             /* margin-top:80px; */
-            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+           box-shadow:  #212121 0px 10px 38px;
+           background-color: #212121;
         }
 
         /* Slideshow container */
@@ -32,6 +33,7 @@
             /* margin-top:80px; */
             width:70%;
             margin-left: 15%;
+           
         }
 
         .active {

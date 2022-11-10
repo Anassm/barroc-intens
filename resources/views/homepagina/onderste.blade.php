@@ -27,19 +27,31 @@
         background-repeat: no-repeat;
         border-radius:20px;
         box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        background-color:#212121;
     }
     .card-text{
         margin-left: 5%;
         margin-right: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius:20px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        background-color:#212121;
     }
     .title-text{
-        font-size: 3rem;
-        color: black;
+        font-size: 2rem;
+        color: #ffd700;
         font-weight: bold;
     }
     .desc-text{
         font-size: 1rem;
-        color: black;
+        color: #ffd700;
     }
 </style>
 
