@@ -105,7 +105,7 @@ class ProductsController extends Controller
     {
         $product = products::inRandomOrder()->limit(1)->get();
         $product_categories = product_categories::All();
-        $producten = products::inRandomOrder()->limit(2)->get();
+        $producten = products::inRandomOrder()->limit(3)->get();
         $productsen = products::inRandomOrder()->limit(1)->get();        
 
         return view('welcome',[

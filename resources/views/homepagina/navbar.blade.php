@@ -41,7 +41,7 @@
 
             .menu a {
                 text-decoration: none;
-                color: #ffd700 ;
+                color: white ;
                 display: block;
                 padding: 10px 1.5rem;
                 transition: background-color .22s ease, color .22s ease;
@@ -49,7 +49,7 @@
 
             .menu a:hover{
                 background-color: #ffd700;
-                color: #fff;
+                color: #212121;
             }
 
             .submenu{

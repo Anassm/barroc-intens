@@ -1,8 +1,19 @@
+<style>
+.card{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.each{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+<div class="card">
 @foreach($producten as $product)
+<div class="each">
 <section class="text-gray-800 body-font">
   <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-wrap -m-4">
-      <div class="p-4 md:w-1/3">
         <div class="h-full border-2 border-gray-300 border-opacity-60 rounded-lg overflow-hidden">
           <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="{{ asset('images/' . $product->image_path) }}" alt="blog">
           <div class="p-6 bg-white">
@@ -20,6 +31,8 @@
         </div>
       </div>
       </<div>
-    </div>
 </section>
+</div>
 @endforeach
+</div>
+

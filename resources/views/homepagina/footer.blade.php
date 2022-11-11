@@ -54,7 +54,7 @@
         .footer{
             background-color: #212121;
             margin-top: 25px;
-            color: #ffd700;
+            color: white;
         }
 </style>
     <footer>
