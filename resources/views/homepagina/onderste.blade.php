@@ -8,72 +8,29 @@
     <title>Document</title>
 </head>
 
-<style> 
-    .grid-2-colums-1-row{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-auto-rows: 300px;
-    }
-    .card-photo{
-        margin-left: 5%;
-        margin-right: 5%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-size: 3rem;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        border-radius:20px;
-        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-        background-color:#212121;
-    }
-    .card-text{
-        margin-left: 5%;
-        margin-right: 5%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-size: 3rem;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        border-radius:20px;
-        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-        background-color:#212121;
-    }
-    .title-text{
-        font-size: 2rem;
-        color: #ffd700;
-        font-weight: bold;
-    }
-    .desc-text{
-        font-size: 1rem;
-        color: #ffd700;
-    }
-</style>
-
 <body>
-    <main>
-        <div class="grid-2-colums-1-row">
-            @foreach($productsen as $product)
-                    <div class="card-photo" style="background-image:url({{ asset('images/' . $product->image_path) }});"></div>
-                    <div class="card-text">
-                        <div class="title-text">
-                            {{$product->name}}
-                        </div>
-
-                        <br/>
-
-                        <div class="desc-text">
-                            {{$product->description}}
-                        </div>
-                    </div>
-                @endforeach
+    @foreach($productsen as $product)
+    <section class="text-gray-600 body-font overflow-hidden bg-amber-100">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
+              <h2 class="text-sm title-font text-gray-800 tracking-widest">Barroc-intens</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-4">  {{$product->name}}</h1>
+              <div class="flex mb-4">
+                <a class="flex-grow text-gray-400 border-b-2 border-gray-400 py-2 text-lg px-1">Description</a>
+              </div>
+              <p class=" text-gray-800 leading-relaxed mb-4">{{$product->description}}</p>
+              <div class="flex space-x-4">
+                <a href="/enkelpagina/{{$product->id}}"><button class="flex ml-auto text-white hover:text-gray-800 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded">Product</button></a>
+                <a href="/contact"><button class="flex ml-auto text-white hover:text-gray-800 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded">Offerte aanvragen </button></a>
+                </button>
+              </div>
+            </div>
+            <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="{{ asset('images/' . $product->image_path) }}">
+          </div>
         </div>
-    </main>
+      </section>
+@endforeach
 </body>
 
 </html>

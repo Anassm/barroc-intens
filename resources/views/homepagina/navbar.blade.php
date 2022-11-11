@@ -130,7 +130,7 @@
                             @endforeach
                         </ul>
                     </li>
-            
+                    <li><a href="/contact">Contact</a></li>
                   <li>
                     @if (Route::has('login'))
                         @auth

@@ -66,46 +66,23 @@
 <main>
 <body>
 @foreach($products as $product)
-<div class="slideshow-container">
-
-
-    <div class="mySlides fade">
-        <img class="photo" src="{{ asset('images/' . $product->image_path) }}"  style="width:100%">
-    </div>
-
-
-</div>
+    <section class="bg-amber-100 text-black body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-black">{{$product->name}}
+            </h1>
+            <p class="mb-8 leading-relaxed">{{$product->description}}</p>
+            <div class="flex justify-center space-x-4 ">
+                <a href="/enkelpagina/{{$product->id}}"><button class="  hover:text-gray-800 inline-flex text-white bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-400 rounded text-lg">Product</button></a>
+                <a href="/contact"><button class=" hover:text-gray-800 inline-flex text-white bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-400 rounded text-lg">offerte aanvragen </button></a>
+            </div>
+          </div>
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+            <img class="object-cover object-center rounded" alt="hero" src="{{ asset('images/' . $product->image_path) }}">
+          </div>
+        </div>
+      </section>
 @endforeach
-
-<div style="text-align:center">
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-</div>
-
-<script>
-            let slideIndex = 0;
-            showSlides();
-
-            function showSlides() {
-                let i;
-                let slides = document.getElementsByClassName("mySlides");
-                let dots = document.getElementsByClassName("dot");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) {
-                    slideIndex = 1
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " active";
-                setTimeout(showSlides, 5000); // Change image every 2 seconds
-            }
-        </script>
 </body>
         </main>
 </html>

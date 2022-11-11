@@ -1,44 +1,38 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<style>
-h1{
-    text-shadow: 2px 2px 5px grey ;
-    font-size: 40px;
-    text-align: center;
-}
-</style>
-<body class="bg-white">
-<h1>{{$categories->name}}</h1>
-<hr/>
-<div class="grid grid-cols-3 w-full justify-items-center">
-      @foreach($categories->products as $product)
-      
-      <div class="shadow-2xl shadow-gray-900 my-4 max-w-sm bg-white rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
-        <a href="#">
-            <img class=" h-80 rounded-t-lg" src="{{ asset('images/' . $product->image_path) }}" alt=""  />
-        </a>
-        <div class="p-5">
-            <a href="#">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-800 dark:text-white">{{$product->name}}</h5>
-            </a>
-            <a href="/contact" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-gray-800 bg-blue-700 rounded-lg hover:bg-amber-300 focus:ring-4 focus:outline-none focus:ring-amber-300 dark:bg-amber-300 dark:hover:bg-amber-300 dark:focus:ring-amber-300">
-              Offerte aanvragen
-              <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-          </a>
-            <a href="/enkelpagina/{{$product->id}}" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-gray-800 bg-blue-700 rounded-lg hover:bg-amber-300 focus:ring-4 focus:outline-none focus:ring-amber-300 dark:bg-amber-300 dark:hover:bg-amber-300 dark:focus:ring-amber-300">
-                Read more
-                <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </a>
+ 
+<div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+    <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">{{$categories->name}}</h1>
+</div>
+  @foreach($categories->products  as $product)
+  <div class="container px-5 py-24 mx-auto ">
+    <div class="flex flex-wrap -m-4">
+      <div class="p-4 md:w-1/3">
+        <div class="h-full border-2 border-gray-300 border-opacity-60 rounded-lg overflow-hidden">
+          <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="{{ asset('images/' . $product->image_path) }}" alt="blog">
+          <div class="p-6 bg-white">
+            <h1 class="title-font text-lg font-medium text-gray-800 mb-3">{{$product->name}}</h1>
+            <p class="leading-relaxed mb-3">{{$product->description}}</p>
+            <div class="flex items-center flex-wrap ">
+              <a href="/enkelpagina/{{$product->id}}"class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Read More
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
+      </<div>
     </div>
-  @endforeach
   </div>
-</body>
-</html>
+</section>
+@endforeach 
+
+
+
+
+
+
+
+
+

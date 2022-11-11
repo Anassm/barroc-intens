@@ -13,7 +13,7 @@
         }
 
 </style>
-<body class="bg-gray-600">
+<body class="bg-amber-100">
     @include('homepagina.navbar')
 
 <div class="whitespace1"></div>

@@ -103,7 +103,7 @@ class ProductsController extends Controller
     }
     public function getproduct(product_categories $categorie)
     {
-        $product = products::inRandomOrder()->limit(3)->get();
+        $product = products::inRandomOrder()->limit(1)->get();
         $product_categories = product_categories::All();
         $producten = products::inRandomOrder()->limit(2)->get();
         $productsen = products::inRandomOrder()->limit(1)->get();        

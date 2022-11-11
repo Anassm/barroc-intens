@@ -10,7 +10,7 @@
 <style>
 
 </style>
-<body>
+<body class="bg-amber-100">
     
     @include('homepagina.navbar')
 <main>

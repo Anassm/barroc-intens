@@ -1,70 +1,5 @@
 
-    <style>
-      body{
-          font-family: Arial, sans-serif;
-            background-image: url("/images/achtergrond.jpg");
-            min-height: 600px;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-      }
-      .enkel{
-        margin-left: 5%;
-        margin-right: 5%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-size: 1rem;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        border-radius:20px;
-        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-        background-color:#212121;
-        text-align: center;
-      }
-      .container{ 
-        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-        height:auto;
-        margin-left: 5vh;
-        margin-right: 10vh;
-        text-align: center;
-        font-family: arial;
-        background-color: #fff;
-        border-radius: 5vh;
-        margin-bottom:5vh;
-        margin-top:5vh;
-        color: black;
-        padding-top: 10vh;
-        padding-bottom: 10vh;
-      }
-      .grid{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-
-      }
-  
-      .img{
-        height: 50vh;
-        justify-content: center;
-        display: flex;
-        width: 75%;
-        position: relative;
-      }
-      
-      h1{
-        color:#ffd700 ;
-        margin-top: 20vh;
-      }
-      
-      h3{
-        color:#ffd700 ;
-      }
-
-    </style>
-    <div class="container">
+    {{-- <div class="container">
       <div class="grid">
         <div class="img">
           <img  src="{{ asset('images/' . $products->image_path) }}"  alt=""/>
@@ -75,4 +10,28 @@
           <h3>{{$products->description}}</h3>
         </div>
       </div>
-    </div>
+    </div> --}}
+    <section class="text-gray-600 body-font overflow-hidden">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="lg:w-4/5 mx-auto flex flex-wrap">
+          <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="{{ asset('images/' . $products->image_path) }}">
+          <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+            <h2 class="text-sm title-font text-gray-500 tracking-widest">Barroc-intens</h2>
+            <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">{{$products->name}}</h1>
+            <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-500 mb-5">
+              <div class="flex ml-6 items-center">
+                <div class="relative">
+                </div>
+              </div>
+            </div>
+            <p class="leading-relaxed">{{$products->description}}</p>
+            <div class="flex">
+          <button class="flex ml-auto hover:text-gray-800 text-white bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-400 rounded">Offerte aanvragen</button>
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
+            </svg>
+          </button>
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
