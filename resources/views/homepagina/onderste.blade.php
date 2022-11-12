@@ -26,7 +26,7 @@
                 </button>
               </div>
             </div>
-            <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="{{ asset('images/' . $product->image_path) }}">
+            <img alt="ecommerce" class=" lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="{{ asset('images/' . $product->image_path) }}">
           </div>
         </div>
       </section>
