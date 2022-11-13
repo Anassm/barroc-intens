@@ -9,15 +9,16 @@
     <h2 class="text-2xl pl-48 pt-8 font-semibold">Alle storingen</h2>
     <!-- overall -->
     <table class="w-9/12 ml-48 mt-6 border-2 border-black">
+        @foreach($storing as $storing)
         <tr>
             <th class="text-left p-4">Status</th>
             <th class="text-left p-4">Naam</th>
             <th class="text-left p-4">Tijd</th>
         </tr>
         <tr>
-            <td class="p-4">Submitted</td>
-            <td class="p-4"><a href="#">Link</a></td>
-            <td class="p-4">12/11/2022 - 19:07:27</td>
+            <td class="p-4">{{$storingen->status}}</td>
+            <td class="p-4">{{$storingen->link}}</td>
+            <td class="p-4">{{$storingen->created_at}}</td>
         </tr>
         <tr>
             <td class="p-4">Failed</td>
@@ -29,6 +30,7 @@
             <td class="p-4"><a href="#">Link</a></td>
             <td class="p-4">30/10/2022 - 13:26:24</td>
         </tr>
+        @endforeach
     </table>
 
     <h2 class="text-2xl pl-48 pt-16 font-semibold">Storingen van vandaag</h2>
