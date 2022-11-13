@@ -15,6 +15,7 @@
         padding-right: 2.5%;
         padding-top: 3%;
         padding-bottom: 3%;
+   
     }    
     .logo{
         font-size: 1.4rem;
@@ -53,8 +54,8 @@
         }
         .footer{
             background-color: #212121;
-            margin-top: 25px;
             color: white;
+
         }
 </style>
     <footer>

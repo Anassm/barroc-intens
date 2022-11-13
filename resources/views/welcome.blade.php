@@ -31,10 +31,7 @@
         @include('homepagina.onderste') 
 
 
-
-
         @include('homepagina.footer')
-
 
         </body>
         </html>
