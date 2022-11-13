@@ -20,4 +20,5 @@ class DatabaseSeeder extends Seeder
             TeamSeeder::class
         ]);
     }
+
 }
