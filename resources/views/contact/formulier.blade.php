@@ -27,11 +27,11 @@
           <div class="p-2 w-full">
             <div class="relative">
               <label for="message" class="leading-7 text-sm text-gray-800">Product informatie</label>
-              <textarea id="message" name="message" class="w-full bg-gray-800 bg-opacity-50 rounded border border-gray-900 focus:border-gray-800 focus:bg-gray-500 focus:ring-2 focus:ring-gray-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+              <textarea id="message" name="message" class="w-full bg-gray-800 bg-opacity-50 rounded border border-gray-900 focus:border-gray-800 focus:bg-gray-500 focus:ring-2 focus:ring-gray-200 h-32 text-base outline-none text-white py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
             </div>
           </div>
           <div class="p-2 w-full">
-            <button class="flex mx-auto text-white bg-gray-800 border-0 py-2 px-8 focus:outline-none hover:text-gray-800 hover:bg-gray-300 rounded text-lg">Offerte aanvragen</button>
+           <button class="flex mx-auto text-white bg-gray-800 border-0 py-2 px-8 focus:outline-none hover:text-gray-800 hover:bg-gray-300 rounded text-lg">Offerte aanvragen</button>
           </div>
           <div class="p-2 w-full pt-8 mt-8 border-t border-gray-400 text-center">
             <a class="text-gray-800">

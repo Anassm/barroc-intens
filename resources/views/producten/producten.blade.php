@@ -22,7 +22,7 @@
   <div class="flex justify-center items-center">
   <section class="text-gray-800 body-font">
     <div class="container px-5 py-24 mx-auto">
-          <div class=" shadow-black shadow-2xl w-80 h-full border-2 border-black border-opacity-60 rounded-lg overflow-hidden">
+          <div class=" shadow-black shadow-xl w-96 h-full border-2 border-black border-opacity-60 rounded-lg overflow-hidden">
             <img class="bg-white lg:h-48 md:h-36 w-full object-cover object-center" src="{{ asset('images/' . $product->image_path) }}" alt="blog">
             <div class="p-6 bg-white">
               <h1 class="title-font text-lg font-medium text-gray-800 mb-3 truncate">{{$product->name}}</h1>
