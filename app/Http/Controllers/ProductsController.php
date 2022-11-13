@@ -74,7 +74,7 @@ class ProductsController extends Controller
         ]);
 
         $products->update($data);
-        return redirect('/inkoop/categorielist'. $products->product_id)->with('succes', 'goed gewijzigd');
+        return redirect('/inkoop/categorielist'. $products->product_id);
     }
     public function getDelete(products $products)
     {

@@ -35,6 +35,9 @@
                                 Hoeveelheid:
                             </th>
                             <th scope="col" class="py-3 px-6">
+                                voorraad:
+                            </th>
+                            <th scope="col" class="py-3 px-6">
                                 <span class="sr-only">Edit</span>
                             </th>
                             <th scope="col" class="py-3 px-6">
@@ -63,6 +66,13 @@
                             </td>
                             <td class="py-4 px-6">
                                 {{ $product->amount }}
+                            </td>
+                            <td class="py-4 px-6">
+                               @if($product->amount >= 150)
+                                    op voorraad
+                                @else
+                                    Niet op voorraad 
+                                @endif
                             </td>
                             <td class="py-4 px-6 text-right">
                                 <a href="/product/edit/{{$product->id}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
@@ -99,4 +109,5 @@
         }
       }
     }
+    
     </script>

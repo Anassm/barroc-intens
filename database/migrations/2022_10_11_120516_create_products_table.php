@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('description');
             $table->string('image_path');
             $table->decimal('price');
-            $table->integer('amount');
+            $table->Integer('amount');
             $table->foreignId('product_category_id');
             $table->timestamps();
         });

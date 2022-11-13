@@ -14,7 +14,7 @@
                         <form action="{{ route('inkoop.productcreate.inkoop') }}" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <label for="text" class="block mb-2 text-sm font-medium text-amber-300 dark:text-amber-300">Categorien naam:</label>
-                            <select name="product_category_id" id="categorie" class="dark:bg-gray-800 text-amber-300">
+                            <select name="product_category_id"  id="categorie" class="dark:bg-gray-800 text-amber-300">
                             @foreach($categories as $categorie)
                                     <option value="{{ $categorie->id }}">{{ $categorie->name }}</option>
                             @endforeach
@@ -42,7 +42,7 @@
                                     @enderror
                                 <div class="mb-6">
                                     <label for="text" class="block mb-2 text-sm font-medium  text-amber-300 dark:text-amber-300">Hoeveelheid:</label>
-                                    <input type="text" id="price" name="amount" class="w-96 bg-amber-300 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-800 dark:border-gray-800 dark:placeholder-amber-300 dark:text-amber-300 dark:focus:ring-blue-500 dark:focus:border-blue-500 text-amber-300 " required>
+                                    <input type="text" id="price" name="amount" value="{{$products->amount}}"  class="w-96  bg-amber-300 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-800 dark:border-gray-800 dark:placeholder-amber-300 dark:text-amber-300 dark:focus:ring-blue-500 dark:focus:border-blue-500 text-amber-300 " required>
                                 </div>
                                 @error('amount')
                                 {{$message}}
