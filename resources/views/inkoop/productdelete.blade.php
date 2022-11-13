@@ -9,10 +9,11 @@
                 <form action="{{ route('inkoop.productdelete.delete', ['products'=>$products->id]) }}" method="post">
                     {{ csrf_field() }}
                     @method('delete')
-                    <p>Titel: {{ $products->name }}</p>
-                    <p>Titel: {{ $products->description }}</p>
-                    <p>Titel: {{ $products->image_path }}</p>
-                    <p>Titel: {{ $products->price }}</p>
+                    <p>NaME: {{ $products->name }}</p>
+                    <p>Description: {{ $products->description }}</p>
+                    <p>image: {{ $products->image_path }}</p>
+                    <p>Price: {{ $products->price }}</p>
+                    <p>Hoeveelheid: {{ $products->amount }}</p>
                     <input style=" background-color: blue; padding: 2em; border-radius: 20px;" type="submit" value="Verwijderen">
                 </form>
         </div>

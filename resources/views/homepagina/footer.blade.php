@@ -1,11 +1,4 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <style>
     .grid-3-columns-1-row{
         display: grid;
@@ -22,6 +15,7 @@
         padding-right: 2.5%;
         padding-top: 3%;
         padding-bottom: 3%;
+   
     }    
     .logo{
         font-size: 1.4rem;
@@ -60,8 +54,8 @@
         }
         .footer{
             background-color: #212121;
-            margin-top: 25px;
-            color: #ffd700;
+            color: white;
+
         }
 </style>
     <footer>
@@ -99,5 +93,3 @@
             </div>
         </div>
     </footer>
-</body>
-</html>

@@ -2,24 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
 </head>
 <body> 
 <style>
-  *{
-    text-decoration: none;
-  }
 </style>
 </head>
-<body>
+<body class="bg-amber-100">
   @include('homepagina.navbar')
-  <main>
-    @include('derde.derdepagina')
-</main>
+
+  @include('derde.derdepagina')
+
   @include('homepagina.footer')
-</div>
+
 
 </body>
 </html>

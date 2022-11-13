@@ -14,7 +14,7 @@
             body{
                 font-size: 1rem;
                 line-height: 1.6;
-                background-color: #ecf0f1;
+                background-color: #212121;
                 color: #666;
             }
 
@@ -41,7 +41,7 @@
 
             .menu a {
                 text-decoration: none;
-                color: #ffd700 ;
+                color: white ;
                 display: block;
                 padding: 10px 1.5rem;
                 transition: background-color .22s ease, color .22s ease;
@@ -49,7 +49,7 @@
 
             .menu a:hover{
                 background-color: #ffd700;
-                color: #fff;
+                color: #212121;
             }
 
             .submenu{
@@ -114,7 +114,6 @@
                 -moz-outline-style: none;
             }
 
-
         </style>
     
         <header>
@@ -130,7 +129,7 @@
                             @endforeach
                         </ul>
                     </li>
-            
+                    <li><a href="/contact">Contact</a></li>
                   <li>
                     @if (Route::has('login'))
                         @auth

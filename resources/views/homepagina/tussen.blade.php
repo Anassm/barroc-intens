@@ -1,54 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    *{
-            color:#ffd700 ;
-        }
-        .photo-grid{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-auto-rows: 300px;
-            
-        }
-        .photo2{
-            margin-left: 5%;
-            margin-right: 5%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-size: 3rem;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            border-radius:24px;
-            height: 100%;
-            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-            
-        }
-        .photo2:hover{
-            box-shadow: rgba(3, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
-            transform: translateY(-3px) scale(1.05);
-        }
-    </style>
-<body>
-    <div class="photo-grid">
-
-        @foreach($producten as $product)
-        <a href="/enkelpagina/{{$product->id}}"><div class="photo2" style="background-image:url({{ asset('images/' . $product->image_path) }});">
-            {{$product->name}}
+<div class="grid lg:grid-cols-3 sm:grid-cols-2">
+@foreach($producten as $product)
+<div class="flex justify-center items-center">
+<section class="text-gray-800 body-font">
+  <div class="container px-5 py-24 mx-auto">
+        <div class=" shadow-amber-100 shadow-lg w-80 sm:h-full border-2 border-amber-100 border-opacity-60 rounded-lg overflow-hidden">
+          <img class=" lg:h-48 md:h-36 sm:w-full object-cover object-center" src="{{ asset('images/' . $product->image_path) }}" alt="blog">
+          <div class="p-6 bg-white">
+            <h1 class="title-font text-lg font-medium text-gray-800 mb-3">{{$product->name}}</h1>
+            <p class="leading-relaxed mb-3 truncate ">{{$product->description}}</p>
+            <div class="flex items-center flex-wrap ">
+              <a href="/enkelpagina/{{$product->id}}"class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Read More
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
-        </a>
-        @endforeach
-    </div>
+      </div>
+      </<div>
+</section>
+</div>
+@endforeach
+</div>
 
-</body>
-
-</html>

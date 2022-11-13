@@ -7,7 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>
+<style>
+
+</style>
+<body class="bg-amber-100">
     
     @include('homepagina.navbar')
 <main>

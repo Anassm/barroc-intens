@@ -25,6 +25,7 @@ class ProductsController extends Controller
             'description' => 'required | max:255 | min:3',
             'image_path' => 'required|mimes:jpg,png,jpeg|max:5048',
             'price' => 'required | max:255 | min:3',
+            'amount' => 'required | max:255 | min:3',
         ]);
 
         
@@ -37,6 +38,7 @@ class ProductsController extends Controller
             'name' => $request->input('name'),
             'price' => $request->input('price'),
             'description' => $request->input('description'),
+            'amount' => $request->input('amount'),
             'product_category_id' => $request->input('product_category_id'),
             'image_path' => $newImageName,]);
             return "GELUKT!";
@@ -67,11 +69,12 @@ class ProductsController extends Controller
             'name' => 'required | max:255 | min:3',
             'description' => 'required | max:255 | min:3',
             'price' => 'required | max:255 | min:3',
+            'amount' => 'required | max:255 | min:3',
 
         ]);
 
         $products->update($data);
-        return redirect('/inkoop/categorielist'. $products->product_id)->with('succes', 'goed gewijzigd');
+        return redirect('/inkoop/categorielist'. $products->product_id);
     }
     public function getDelete(products $products)
     {
@@ -100,9 +103,9 @@ class ProductsController extends Controller
     }
     public function getproduct(product_categories $categorie)
     {
-        $product = products::inRandomOrder()->limit(3)->get();
+        $product = products::inRandomOrder()->limit(1)->get();
         $product_categories = product_categories::All();
-        $producten = products::inRandomOrder()->limit(2)->get();
+        $producten = products::inRandomOrder()->limit(3)->get();
         $productsen = products::inRandomOrder()->limit(1)->get();        
 
         return view('welcome',[
@@ -115,12 +118,12 @@ class ProductsController extends Controller
     }
 
 
-    public function enkelproduct(product_categories $product_categories, products $product)
+    public function enkelproduct( products $products)
     {
         $categorie = product_categories::All();
-
+        $product_categories = product_categories::all();
         return view('enkelpagina',[
-        'products'=> $product,
+        'products'=> $products,
         'categoriese' => $categorie,
         'categories'=> $product_categories,
 
