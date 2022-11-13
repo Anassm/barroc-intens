@@ -7,6 +7,7 @@ use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\NotesController;
 use App\Http\Controllers\teamscontroller;
 use App\Http\Controllers\storingController;
+use App\Http\Controllers\NieuwklantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,6 +54,8 @@ Route::get('/categorie/delete/{categories}', [ProductCategoriesController::class
 Route::delete('/categorie/delete/{categories}', [ProductCategoriesController::class, 'deleteDelete'])->name('inkoop.categoriedelete');
 Route::get('/sales/notes', [NotesController::class, 'getcreate'])->name('sales.notes');
 Route::post('/sales/notes', [NotesController::class, 'postnotes'])->name('sales.notes.sales');
+Route::get('/sales/nieuwklant', [NieuwklantController::class, 'getcreate'])->name('sales.nieuwklant');
+Route::post('/sales/nieuwklant', [NieuwklantController::class, 'postklant'])->name('sales.nieuwklant.sales');
 
 Route::get('/productpagina/{product_categories}', [ProductsController::class, 'productpagina'])->name('productpagina');
 

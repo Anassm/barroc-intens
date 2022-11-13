@@ -5,6 +5,9 @@
         <a href="/sales/notes" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-gray-800 bg-blue-700 rounded-lg hover:bg-amber-300 focus:ring-4 focus:outline-none focus:ring-amber-300 dark:bg-amber-300 dark:hover:bg-amber-300 dark:focus:ring-amber-300">
            Notes toevoegen
        </a>
+       <a href="/sales/nieuwklant" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-gray-800 bg-blue-700 rounded-lg hover:bg-amber-300 focus:ring-4 focus:outline-none focus:ring-amber-300 dark:bg-amber-300 dark:hover:bg-amber-300 dark:focus:ring-amber-300">
+           Klant toevoegen
+       </a>
      
      
      
