@@ -53,6 +53,7 @@ Route::get('/categorie/edit/{product_categories}', [ProductCategoriesController:
 Route::put('/categorie/edit/{product_categories}', [ProductCategoriesController::class, 'putEdit'])->name('inkoop.categorie.put');
 Route::get('/categorie/delete/{categories}', [ProductCategoriesController::class, 'getDelete'])->name('inkoop.categoriedelete.delete');
 Route::delete('/categorie/delete/{categories}', [ProductCategoriesController::class, 'deleteDelete'])->name('inkoop.categoriedelete');
+
 Route::get('/sales/notes', [NotesController::class, 'getcreate'])->name('sales.notes');
 Route::post('/sales/notes', [NotesController::class, 'postnotes'])->name('sales.notes.sales');
 Route::get('/sales/nieuwklant', [NieuwklantController::class, 'getcreate'])->name('sales.nieuwklant');
@@ -67,12 +68,10 @@ Route::get('/', [ProductsController::class, 'getproduct'])->name('getproduct');
 
 Route::get('/dashboard', [teamscontroller::class, 'team'])->name('dashboard');
 
-
 Route::get('/maintenance/storing', [storingController::class, 'storingPageView'])->name('maintenance.storing');
 
-
 Route::get('/enkelpagina/{products}', [ProductsController::class, 'enkelproduct'])->name('enkelproduct');
-
 Route::get('/contact', [ProductsController::class, 'contact'])->name('contact');
 
-Route::get('/finance', [FactuurController::class, 'factuurPageView'])->name('factuurPageView');
+Route::get('/finance/voorbeeldfactuur', [FactuurController::class, 'factuurPageView'])->name('factuurPageView');
+Route::get('/finance', [FactuurController::class, 'factuurCreate'])->name('factuurCreate');
