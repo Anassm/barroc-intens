@@ -22,9 +22,9 @@
 
     @include('homepagina.slider')
 
-
+<div class="bg-black">
     @include('homepagina.tussen')
-
+</div>
 
     <div class="whitespace1"></div>
 
