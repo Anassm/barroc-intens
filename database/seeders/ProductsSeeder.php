@@ -17,15 +17,6 @@ class ProductsSeeder extends Seeder
     {
         DB::table('products')->insert([
             [
-                // 'id' => 0,
-                'name' => "Ali-B Deluxe!",
-                'description' => "Voor de lekkerste koffie! Handgemaakt!",
-                'image_path' => "637167cab9e79-.jpg",
-                'price' =>"123",
-                'amount'=>"321",
-                'product_category_id' => "2"
-            ],
-            [
                 // 'id' => 1,
                 'name' => "Bit-Deluxe",
                 'description' => "The better version of the Bit collection!",

@@ -10,4 +10,8 @@ class FactuurController extends Controller
         return view("finance.factuur_voorbeeld");
     }
 
+    public function factuurCreate() {
+        return view("finance.factuur_create");
+    }
+
 }
