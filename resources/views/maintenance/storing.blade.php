@@ -16,9 +16,9 @@
             <th class="text-left p-4">Tijd</th>
         </tr>
         <tr>
-            <td class="p-4">{{$storings->status}}</td>
-            <td class="p-4">{{$storings->link}}</td>
-            <td class="p-4">{{$storings->created_at}}</td>
+            <td class="p-4">{{$storing->status}}</td>
+            <td class="p-4">{{$storing->link}}</td>
+            <td class="p-4">{{$storing->created_at}}</td>
         </tr>
         <tr>
             <td class="p-4">Failed</td>

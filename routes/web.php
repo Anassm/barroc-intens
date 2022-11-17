@@ -68,9 +68,8 @@ Route::get('/', [ProductsController::class, 'getproduct'])->name('getproduct');
 
 Route::get('/dashboard', [teamscontroller::class, 'team'])->name('dashboard');
 
-Route::get('/maintenance/storing', [storingController::class, 'storing'])->name('maintenance.storing');
+Route::get('/maintenance/storing', [storingController::class, 'storings'])->name('maintenance.storing');
 
-Route::get('/maintenance/storing', [storingController::class, 'storingPageView'])->name('maintenance.storing');
 
 Route::get('/enkelpagina/{products}', [ProductsController::class, 'enkelproduct'])->name('enkelproduct');
 Route::get('/contact', [ProductsController::class, 'contact'])->name('contact');
