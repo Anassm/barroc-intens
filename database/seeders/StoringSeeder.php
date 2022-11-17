@@ -14,7 +14,7 @@ class StoringSeeder extends Seeder
      * @return void
      */
     public function run() {
-        DB::statement("INSERT INTO `storing` (`id`, `status`, `link`, `created_at`, `updated_at`) VALUES
+        DB::statement("INSERT INTO `storings` (`id`, `status`, `link`, `created_at`, `updated_at`) VALUES
         (1, 'Submitted', 'http://barroc-intens.test', now(), now()),
         (2, 'Failed', 'http://barroc-intens.test', now(), now()),
         (3, 'Unknown', 'http://barroc-intens.test', now(), now())");

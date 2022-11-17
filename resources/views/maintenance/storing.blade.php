@@ -9,16 +9,16 @@
     <h2 class="text-2xl pl-48 pt-8 font-semibold">Alle storingen</h2>
     <!-- overall -->
     <table class="w-9/12 ml-48 mt-6 border-2 border-black">
-        @foreach($storing as $storing)
+        @foreach($storingen as $storing)
         <tr>
             <th class="text-left p-4">Status</th>
             <th class="text-left p-4">Naam</th>
             <th class="text-left p-4">Tijd</th>
         </tr>
         <tr>
-            <td class="p-4">{{$storingen->status}}</td>
-            <td class="p-4">{{$storingen->link}}</td>
-            <td class="p-4">{{$storingen->created_at}}</td>
+            <td class="p-4">{{$storings->status}}</td>
+            <td class="p-4">{{$storings->link}}</td>
+            <td class="p-4">{{$storings->created_at}}</td>
         </tr>
         <tr>
             <td class="p-4">Failed</td>
