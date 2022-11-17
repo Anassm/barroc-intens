@@ -14,6 +14,6 @@ class CompaniesSeeder extends Seeder
      */
     public function run()
     {
-        //
+        
     }
 }
